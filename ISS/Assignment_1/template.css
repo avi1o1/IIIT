@@ -1,0 +1,289 @@
+/*  This file is for the sole purpose of styling templates and elements that will remain constant throughout, ie,
+    will appear on all page irrespective of the content. Hence, this file can be included in all .html file, and
+    further .css files can provide the styling for content and page-specific elements.
+*/
+
+
+/* Importing Fonts [ SF Pro ] */
+@font-face {
+    font-family: "SF Pro";
+    src: url('Resources/sf-pro/SFPRODISPLAYREGULAR.OTF') format('opentype');
+}
+@font-face {
+    font-family: "Headings";
+    src: url('Resources/sf-pro/SFPRODISPLAYBOLD.OTF') format('opentype');
+}
+
+/* Setting margin and padding 0 for ease of designing */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "SF Pro";
+}
+
+/* Removing hyperlink decorations for custom UI */
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Adding shadow */
+.coolShadow {
+    box-shadow: 0px 4px 40px 0px rgba(256, 256, 256, 0.25)  ;
+}
+
+.transition-effect {
+    transition: background 1s, box-shadow 1s;
+}
+
+.mode-transition-effect {
+    transition: background 0.25s, box-shadow 0.25s;
+}
+
+.sectionButton {
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Overall page background */
+#bigBoy {
+    height: 100vh;
+    width: 100vw;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #2B2B2B;
+}
+
+/* Top-Right Literal-Useless Box */
+#dumbBox {
+    height: 36px;
+    width: 323px;
+
+    margin-left: 61.7vw;
+    margin-top: 9.3vh;
+
+    position: absolute;
+    z-index: 69;
+
+    border-radius: 17px;
+    background-color: #858585;
+}
+
+/* Left-Side Menu */
+#menu-box {
+    /* The white containing div */
+    height: 672px;
+    width: 249px;
+
+    margin-left: 19vw;
+    margin-top: 21.57vh;
+
+    position: absolute;
+    z-index: 69;
+
+    border-radius: 17px;
+    background-image: linear-gradient(#FFFFFF, #CACACA);
+}
+
+
+/* Name image */
+#name {
+    height: 43px;
+    border-radius: 13px;
+    margin: 17px;
+
+    background-image: url("Resources/namie_bw.png");
+    background-size: cover;
+}
+
+/* Menu section heading */
+.menuHeading {
+    margin: 19px;
+    margin-top: 15px;
+    margin-bottom: 3px;
+
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.69);
+}
+
+/* Traversal Sections */
+.menuSubTopic {
+    height: 20px;
+    width: 216px;
+
+    margin-left: 13px;
+    padding: 3.7px;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 0.8rem;
+    font-weight: 1;
+}
+
+/* Highlighting section on hover */
+.menuSubTopic:hover {
+    background-color: #2b2b2b17;
+    border-radius: 5px;
+    height: 20px;
+    width: 216px;
+}
+
+/* Icons for each section */
+.menuIcon {
+    width: 17px;
+    margin-top: 1px;
+    padding-right: 1px;
+    margin-right: 10px;
+}
+
+/* Highlights the current user section */
+.onIt {
+    background-color: #2b2b2b33;
+    border-radius: 5px;
+    height: 20px;
+    width: 216px;
+}
+
+/* Resume Button */
+#resume {
+    height: 36px;
+    width: 257px;
+
+    margin-left: 34vw;
+    margin-top: 87vh;
+
+    position: absolute;
+    z-index: 69;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 17px;
+    background-color: #696969;
+
+    font-size: 0.87rem;
+    font-weight: 500;
+    color: rgba(255, 2555, 255);
+}
+
+/* Main Content Area */
+#bg-box {
+    height: 671px;
+    width: 1094px;
+
+    position: absolute;
+    z-index: 10;
+
+    border-radius: 17px;
+
+    background: linear-gradient(128deg, #FFFFFF 7.37%, #222222 83.69%);
+    transition: background 5s ease;
+}
+
+/* Div containing socials and mode change */
+#icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+}
+
+/* Div containing social links */
+#socials {
+    width: 100%;
+    padding-top: 19px;
+    margin-left: 19px;
+
+    display: flex;
+    align-items: center;
+}
+
+/* Socials div*/
+.socialIcon {
+    height: 17px;
+    width: 17px;
+    margin: 3.7px;
+    border-radius: 3px;
+}
+
+/* Linkedin icon image */
+#linkedin {
+    background-image: url("Resources/black_linkedin.png");
+    background-size: cover;
+}
+
+/* Github icon image */
+#github {
+    background-image: url("Resources/black_github.png");
+    background-size: cover;
+}
+
+/* Mail icon image */
+#mail {
+    width: 23px;
+
+    background-image: url("Resources/black_mail.png");
+    background-size: cover;
+}
+
+/* Mode change div */
+#theme {
+    justify-self: end;
+    align-self: end;
+
+    padding-right: 19px;
+}
+
+/* Mode change icon */
+#changeMode {
+    height: 23px;
+    width: 23px;
+    background: none;
+    background-image: url("Resources/moon.png");
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/* Content area */
+#contentBox {
+    width: 819px;
+    height: 569px;
+
+    margin-left: 248px;
+    margin-top: 16.9px;
+
+    overflow-y: scroll;
+}
+
+/* Modularising Scrollbar */
+::-webkit-scrollbar {
+    width: 6.9px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 6.9px;
+}
+
+#contentBox:hover::-webkit-scrollbar-track {   
+    background: #f1f1f12d;
+    border-radius: 6.9px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 6.9px;
+}
+
+#contentBox:hover::-webkit-scrollbar-thumb {
+    background: white;
+}

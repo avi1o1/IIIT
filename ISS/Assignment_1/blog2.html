@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> ISS Rant </title>
+        <link rel="stylesheet" href="blogpage.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+
+        <header>
+            <div class="return">
+                <a href="blog.html">
+                    <div class="back2blog">
+                        <i class="fa-solid fa-arrow-left-long" style="padding-top: 3px;"> </i>
+                        <div style="width: 10px;"> </div>
+                        <p> Back to main site </p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="otherBlogs">
+                <a href="blog3.html">
+                    <div class="linkToBlogs">
+                        <div> Traffic Rules </div>
+                    </div>
+                </a>
+
+                <a href="blog4.html">
+                    <div class="linkToBlogs">
+                        <div> Armed Idiots </div>
+                    </div>
+                </a>
+
+                <div id="theme">        
+                    <button id="changeMode" onclick="blogMode()"> </button>
+                </div>
+            </div>
+        </header>
+
+        <hr>
+
+        <main>
+            <div class="left">
+                <div class="heading">
+                    <div class="topic"> Crash Courses </div>
+                    <div style="width: 3rem;"> </div>
+                    <div class="likes">
+                        <button id="likeButton">
+                            <i id="icon" class="fa-regular fa-heart fa-2xl"> </i>
+                        </button>
+
+                        <div>
+                            <span id="likeCount"> 0 </span> Likes
+                        </div>
+                    </div>
+                </div>
+
+                <div class="by"> By AviLOL</div>
+                
+                <div class="content">
+                    In today's bustling world, where every minute is accounted for and every second is a race against time,
+                    crash courses have become the latest trend. These expedited learning experiences have gained popularity,
+                    promising knowledge at warp speed. But are crash courses the shortcut to brilliance or merely a scam?
+                    <br><br>
+                    Picture this : you wake up one fine morning with the sudden realisation that you need to master web designing
+                    today. What do you do? Simple, you sign up for IS…, I mean, crash course; you sign up for some crash course, of
+                    course! Because why spend years learning something when you can cram it all into a few sleepless nights, right?
+                    Wrong! Welcome to the world of dummy-dum-dums.
+                    <br><br>
+                    The journey begins with the seemingly innocent desire to become an overnight expert. Crash courses, with their
+                    tempting promises of quick expertise, attract individuals seeking a rapid gain of knowledge. But let's face it,
+                    the only thing crashing harder than these courses is our hopes and dreams of becoming overnight geniuses. It's
+                    like trying to learn brain surgery from a YouTube tutorial - sure, you might pick up a few tips and tricks, but
+                    would you trust yourself to perform surgery on your pet (Kadamb) rats?
+                    <br><br>
+                    The allure is undeniable, but what lies beneath the surface is a realm of unrealistic expectations. The reality
+                    often unfolds as a comedy of errors, leaving behind a trail of befuddled dummy-dum-dums. Learning becomes a race
+                    against time, where deep understandings of the topic are sacrificed for a merely speedy surface-level knowledge.
+                    The result? A workforce armed with certificates and resumes, but often clueless when faced with real-world
+                    applications.
+                    <br><br>
+                    But it's not just the crash courses themselves that are to blame. Oh no, we can't let colleges and education off
+                    the hook that easily. In their never-ending quest to churn out graduates faster than Indigo's fleet size gain,
+                    colleges have embraced the crash course culture with open arms. Professors breeze through lectures at warp speed,
+                    barely pausing to take a breath, let alone answer questions. It's like they're playing a game of academic hot
+                    potato, and they're determined not to get beaten by their DSA counterparts.
+                    <br><br>
+                    And so, the burden falls on us students to pick up the slack. Spending endless nights scouring the depths of the
+                    internet for nuggets of wisdom and praying to the ChatGPT and Google gods for divine intervention. But no matter
+                    how hard we try, it's like trying to build a house with nothing but a pile of toothpicks and a roll of duct tape - 
+                    sure, you might make something vaguely resembling a shelter, but would you trust it to withstand a stiff breeze?
+                    <br><br>
+                    In this comedic saga, the joke is on the system itself. The very institutions meant to foster deep understanding
+                    inadvertently contribute to the rise of surface-level scholars. The crash course, once a beacon of hope for time-
+                    strapped learners, glamorises 'knowing a little about a lot', while the industry requires individuals 'knowing a
+                    lot about a little'. The crash-and-learn mentality permeates higher education, creating a generation of graduates
+                    with degrees but lacking in-depth knowledge.
+                    <br><br>
+                    In conclusion, the comedy of crash courses lies in their ability to produce a workforce of dummy-dum-dums,
+                    individuals who may have certificates in hand but lack the knowledge that true expertise demands. As education
+                    evolves, it's essential to strike a balance between efficiency and depth, ensuring that learners don't become
+                    casualties of the crash-and-burn mentality. After all, in the pursuit of knowledge, slow and steady often wins
+                    the race.
+                </div>
+            </div>
+
+            <div class="right">
+                <img class="blogImg" src="Resources/blog2Img.png">
+            </div>
+        </main>
+
+        <footer>
+            <div class="comments"> <span id="commentCount"> 0 </span> Comments </div>
+
+            <div class="commenting">
+                <textarea id="commentInput" rows="4" cols="69" placeholder="Add a comment..."> </textarea>
+                <button class='commentButton' onclick="postComment()"> Post </button>
+                <ol id="commentList"> </ol>
+            </div>
+        </footer>
+
+        <script src="blog2.js"></script>
+    </body>
+</html>

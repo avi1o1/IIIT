@@ -1,0 +1,52 @@
+.skillContent {
+    height: 100%;
+    width: 98.69%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.skillMain {
+    width: 87%;
+}
+
+.topImg {
+    width: 100%;
+}
+
+.rightImg {
+    padding-left: 0.69vw;
+    padding-right: 0.69vw;
+    height: 100%;
+}
+
+.imgBorder {
+    border: 4.2px solid white;
+    border-radius: 47px;
+}
+
+.skillText {
+    padding-top: 1vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+.left {
+    height: 100%;
+    width: 37%;
+}
+
+.heading {
+    padding-top: 0.07vh;
+    font-size: 3rem;
+    font-weight: 900;
+    font-family: "Headings";
+}
+
+.right {
+    height: 100%;
+    width: 63%;
+}

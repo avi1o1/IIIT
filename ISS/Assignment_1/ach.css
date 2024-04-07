@@ -1,0 +1,42 @@
+.achContent {
+    height: 100%;
+    width: 98.69%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.achMain {
+    width: 87%;
+}
+
+.rightImg {
+    padding-left: 0.69vw;
+    padding-right: 0.69vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgBorder {
+    border: 4.2px solid white;
+    border-radius: 47px;
+    margin-bottom: 5px;
+}
+
+.achText {
+    padding-top: 1vh;
+    width: 100%;
+    color: white;
+
+    display: inline-block;
+}
+
+.achHeading {
+    font-size: 2.6rem;
+    font-weight: 900;
+    font-family: "Headings";
+    padding-bottom: 7px;
+}

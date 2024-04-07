@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> Peek Delhi </title>
+        <link rel="stylesheet" href="blogpage.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+
+        <header>
+            <div class="return">
+                <a href="blog.html">
+                    <div class="back2blog">
+                        <i class="fa-solid fa-arrow-left-long" style="padding-top: 3px;"> </i>
+                        <div style="width: 10px;"> </div>
+                        <p> Back to main site </p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="otherBlogs">
+                <a href="blog4.html">
+                    <div class="linkToBlogs">
+                        <div> Armed Idiots </div>
+                    </div>
+                </a>
+
+                <a href="blog2.html">
+                    <div class="linkToBlogs">
+                        <div> Crash Courses </div>
+                    </div>
+                </a>
+
+                <div id="theme">        
+                    <button id="changeMode" onclick="blogMode()"> </button>
+                </div>
+            </div>
+        </header>
+
+        <hr>
+
+        <main>
+            <div class="left">
+                <div class="heading">
+                    <div class="topic"> Traffic Rules </div>
+                    <div style="width: 3rem;"> </div>
+                    <div class="likes">
+                        <button id="likeButton">
+                            <i id="icon" class="fa-regular fa-heart fa-2xl"> </i>
+                        </button>
+
+                        <div>
+                            <span id="likeCount"> 0 </span> Likes
+                        </div>
+                    </div>
+                </div>
+
+                <div class="by"> By AviLOL</div>
+                
+                <div class="content">
+                    Imagine driving through a puzzle of traffic rules - it's like being in a game where the signs are playing
+                    hide-and-seek. One moment, you're slowing down for a yield sign, not sure who you're supposed to yield to.
+                    It's like the sign is teasing you, making driving feel like a playful adventure.
+                    <br><br>
+                    Then there's the speed limit confusion. In one area, it feels like you're crawling at a snail's pace, and
+                    suddenly, you're on a road where you're supposed to go super fast. It's like a game where the rules change
+                    as much as the weather - 30 mph turns into 60 mph in the blink of an eye.
+                    <br><br>
+                    Turn signals are a bit like secret codes everyone's trying to figure out. You signal left, thinking you're
+                    about to turn, but the driver behind you mysteriously turns right. It's a bit like a dance where everyone's
+                    doing their own moves, set to the soundtrack of honking horns.
+                    <br><br>
+                    Trying to park is another adventure. It's like watching a funny show as people try to slide into tight spots.
+                    Bumpers might kiss, and there's screeching like in the movies. Parking becomes this funny dance where the curb
+                    becomes an unexpected partner.
+                    <br><br>
+                    Traffic lights are like colorful bosses of the streets. Red means stop, green means go, and yellow means either
+                    hit the gas or risk stopping awkwardly in the middle of the road. It's like a dance where we all try to follow
+                    the rules, but sometimes it feels like we're dancing to a song that keeps changing.
+                    <br><br>    
+                    In this funny world of traffic rules, where signs play hide-and-seek, speed limits are like riddles, and turn
+                    signals act like they're playing a guessing game, humor helps us get through it. So, the next time you're feeling
+                    confused by the traffic rules, just remember, we're all in this funny game together, trying to figure out the
+                    twists and turns of the road.
+                </div>
+            </div>
+
+            <div class="right">
+                <img class="blogImg" style="margin-left: 37px; margin-top: 0;" src="Resources/blog3Img.png">
+            </div>
+        </main>
+
+        <footer>
+            <div class="comments"> <span id="commentCount"> 0 </span> Comments </div>
+
+            <div class="commenting">
+                <textarea id="commentInput" rows="4" cols="69" placeholder="Add a comment..."> </textarea>
+                <button class='commentButton' onclick="postComment()"> Post </button>
+                <ol id="commentList"> </ol>
+            </div>
+        </footer>
+
+        <script src="blog3.js"></script>
+    </body>
+</html>
