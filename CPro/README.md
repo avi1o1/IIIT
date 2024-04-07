@@ -1,6 +1,6 @@
-# CPro Assignments
+# CPro
 
-This repository contains all the assignments completed done by me during the CS0.101 Computer Programming course at IIIT Hyderabad.
+This repository contains all the assignments done by me during the CS0.101 Computer Programming course at IIIT Hyderabad. This course gave an introduction to the basic concepts of computer programming. It covered the basics of programming in C, including data types, control structures, functions, arrays, and pointers.
 
 ## Table of Contents
 
