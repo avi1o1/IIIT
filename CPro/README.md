@@ -6,9 +6,9 @@ This repository contains all the assignments done by me during the CS0.101 Compu
 
 - [Assignment 3](./Assignment_3)
 
-- [Assignment 4](./assignment_4)
+- [Assignment 4](./Assignment_4)
 
-- [Assignment 5](./assignment_5)
+- [Assignment 5](./Assignment_5)
 
 ### Note
 
