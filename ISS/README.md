@@ -4,17 +4,17 @@ This repository contains all the assignments done by me during the CS6.201 Intro
 
 ## Table of Contents
 
-- [Lab 1](./Lab_1)
+- [Lab 1](./Labs/Lab_1)
 
-- [Lab 2](./Lab_2)
+- [Lab 2](./Labs/Lab_2)
 
-- [Lab 3](./Lab_3)
+- [Lab 3](./Labs/Lab_3)
 
-- [Lab 4](./Lab_4)
+- [Lab 4](./Labs/Lab_4)
 
-- [Assignment 1](./Assignment_1)
+- [Assignment 1](./Assignments/Assignment_1)
 
-- [Assignment 2](./Assignment_2)
+- [Assignment 2](./Assignments/Assignment_2)
 
 ### Note
 

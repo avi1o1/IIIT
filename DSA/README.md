@@ -5,13 +5,15 @@ This repository contains all the assignments done by me during the CS1.201 Data 
 
 ## Table of Contents
 
-- [Assignment 1](./Assignment_1)
+- [Assignment 1](./Assignments/Assignment_1)
 
-- [Assignment 2](./Assignment_2)
+- [Assignment 2](./Assignments/Assignment_2)
 
-- [Assignment 3](./Assignment_3)
+- [Assignment 3](./Assignments/Assignment_3)
 
-- [Assignment 4](./Assignment_4)
+- [Assignment 4](./Assignments/Assignment_4)
+
+- [Assignment 5](./Assignments/Assignment_5)
 
 <hr>
 <hr>

@@ -4,11 +4,11 @@ This repository contains all the assignments done by me during the CS0.101 Compu
 
 ## Table of Contents
 
-- [Assignment 3](./Assignment_3)
+- [Assignment 3](./Assignments/Assignment_3)
 
-- [Assignment 4](./Assignment_4)
+- [Assignment 4](./Assignments/Assignment_4)
 
-- [Assignment 5](./Assignment_5)
+- [Assignment 5](./Assignments/Assignment_5)
 
 ### Note
 

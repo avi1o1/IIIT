@@ -4,9 +4,9 @@ This repository contains all the assignments done by me during the CS2.201 Compu
 
 ## Table of Contents
 
-- [Assignment 1](./Assignment_1)
+- [Assignment 1](./Assignments/Assignment_1)
 
-- [Assignment 2](./Assignment_2)
+- [Assignment 2](./Assignments/Assignment_2)
 
 <hr>
 <hr>
