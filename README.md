@@ -6,9 +6,9 @@ This repository contains all the assignments, labs, and projects completed by me
 
 The repository is organized by courses, with each course having its own directory. Inside each course directory, you will find the following:
 
-- Assignments_N (if any) : Nth Assignment of the Course.
-- Labs_N (if any) : Nth Lab of the Course.
-- Projects (if any) : The projects completed during the course.
+- Assignments (if any) : Folder containing all the assignments done during the course.
+- Labs (if any) : Folder containing all the labs done during the course.
+- Projects (if any) : Folder containing all the projects done during the course.
 
 Feel free to explore the repository and access the code and documentation for each course.
 

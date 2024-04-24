@@ -12,7 +12,7 @@ This repository contains all the assignments done by me during the CS0.101 Compu
 
 ### Note
 
- - Assignment 1 and 2 were OJ-based, and thus don't have code available code files as such.
+ - Assignment 1 and 2 were OJ-based, and thus don't have code files available.
 
  - There was an optional project associated with the course too. The same, can be accessed at https://github.com/avi1o1/snake-game
 

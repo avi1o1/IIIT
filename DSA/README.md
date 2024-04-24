@@ -15,6 +15,8 @@ This repository contains all the assignments done by me during the CS1.201 Data 
 
 - [Assignment 5](./Assignments/Assignment_5)
 
+- [Lab Sessions](./Labs)
+
 <hr>
 <hr>
 <hr>

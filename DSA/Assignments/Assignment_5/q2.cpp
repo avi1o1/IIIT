@@ -1,97 +1,107 @@
 #include <bits/stdc++.h>
+#define ll long long int
 using namespace std;
 
-// Finding minimum weight path between two vertices
-int minPath(int src, int dest, map<int, list<pair<int, int>>> graph) {
-    // Setting up book-keeping arrays
-    map<int, bool> visited;
-    map<int, int> distance;
+int findAns(vector<vector<vector<ll>>> &graph, int vertexCount) {
+    // Initialising min-heap for Dijkstra's Algorithm
+    priority_queue<pair<ll, ll>, vector<pair<ll, ll>>, greater<pair<ll, ll>>> pq;
+	pq.push(make_pair(0, 1));
 
-    for (auto i : graph)
-        visited[i.first] = 0;
-    
-    for (auto i : graph)
-        distance[i.first] = INT_MAX;
+    // Initialising distance array
+    vector<ll> dist(vertexCount+1, INT_MAX);
+    vector<int> opt(vertexCount+1, 0);
+	dist[1] = 0;
 
-    // Initialising a heap structure for Dijkstra's Algorithm
-    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
-    pq.push(make_pair(0, src));
-    distance[src] = 0;
+	// While there are vertices to traverse
+    int ans = 0;
+	while (!pq.empty()) {
+		int node = pq.top().second;
+		pq.pop();
 
-    // While there are vertices to traverse
-    while (!pq.empty()) {
-        // Getting the minimum element
-        int node = pq.top().second;
-        pq.pop();
+		for (auto i : graph[node]) {
+            // Extracting node info
+			int edgeEnd = i[0];
+			ll weight = i[1];
+            int isFiber = i[2];
 
-        // If node is already visited
-        if (visited[node])
-            continue;
-        //Otherise
-        else {
-            // Marking node as visited
-            visited[node] = true;
+			// If there is shorted path to v through u.
+			if (dist[edgeEnd] > dist[node] + weight) {
+				// Updating distance of v
+				dist[edgeEnd] = dist[node] + weight;
+				pq.push({dist[edgeEnd], edgeEnd});
 
-            // Traversing the node's neighbours
-            for (auto i : graph[node]) {
-                int neighbour = i.first;
-                int weight = i.second;
-
-                // If the distance to the neighbour is lower than already
-                if (distance[neighbour] > distance[node] + weight) {
-                    distance[neighbour] = distance[node] + weight;
-
-                    // Adding the node to our heap
-                    pq.push(make_pair(distance[neighbour], neighbour));
+                if (opt[edgeEnd] == 1) {
+                    ans--;
+                    opt[edgeEnd] = 0;
+                    // cout << edgeEnd << " : " << dist[edgeEnd] << "\n";
                 }
+
+                if (isFiber) {
+                    ans++;
+                    opt[edgeEnd] = 1;
+                    // cout << edgeEnd << " : " << dist[edgeEnd] << "\n";
+                }
+			}
+
+            else if (dist[edgeEnd] == dist[node] + weight && !isFiber && opt[edgeEnd]) {
+                // cout << dist[edgeEnd] << " " << dist[node] << " " << weight << " " << isFiber << " " << opt[edgeEnd] << "\n";
+                ans--;
+                opt[edgeEnd] = 0;
+                // cout << edgeEnd << " : " << dist[edgeEnd] << "\n";
             }
-        }
-    }
-    // Finally, returning the minimum distance
-    return distance[dest];
+		}
+	}
+
+    // printing distance array
+    // for (int i = 0; i < vertexCount; i++) {
+    //     cout << i+1 << " : " << dist[i+1] << "\n";
+    // }
+
+    // cout << ans << "\n";
+    return ans;
 }
 
 int main() {
     // Taking input
-    int N, M, K;
-    cin >> M >> N >> K;
+    int edgeCount, vertexCount, opticals;
+    cin >> vertexCount >> edgeCount >> opticals;
 
-    // Initialising Graph // [ ..., vertexk : [ [vertexk1, weightk1] , [vertexk2, weightk2] , ... ] , ... ]
-    map<int, list<pair<int, int>>> graph;       
+    // Initialising Graph [ edgeStart : { (edgeEnd, edgeWeight), ... } ]
+    vector<vector<vector<long long int>>> graph(vertexCount+1);
     
     // Taking input of normal connections
-    for (int i = 0; i < N; i++) {
+    for (int i = 0; i < edgeCount; i++) {
         // Taking edge input
-        int a, b, l;
+        long long int a, b, l;
         cin >> a >> b >> l;
 
-        // Adding undirected edge (same as bidirectional edge)
-        graph[a].push_back(make_pair(b, l));
-        graph[b].push_back(make_pair(a, l));
+        // Adding edges to graph [ 0 : Normal connection ]
+        graph[a].push_back({b, l, 0});
+        graph[b].push_back({a, l, 0});
     }
 
-    // // Printing the graph
-    // for (auto i : graph) {
-    //     cout << i.first << " : ";
-    //     for (auto j : i.second)
-    //         cout << "[" << j.first << ", " << j.second << "] ";
-    //     cout << endl;
+    // Taking input of fiber connections
+    for (int i = 0; i < opticals; i++) {
+        // Taking edge input
+        long long int c, k;
+        cin >> c >> k;
+
+        // Adding edges to graph [ 1 : Fiber connection ]
+        graph[1].push_back({c, k, 1});
+        graph[c].push_back({1, k, 1});
+    }
+
+    // Printing Graph
+    // for (int i = 0; i < vertexCount; i++) {
+    //     cout << i << " : ";
+    //     for (int j = 0; j < graph[i].size(); j++) {
+    //         cout << "[" << graph[i][j][0] << ", " << graph[i][j][1] << ", " << graph[i][j][2] << "], ";
+    //     }
+    //     cout << "\n";
     // }
 
-    // Comparing the fiber latencies with minimum existing latency
-    int ans = 0;
-    for (int j = 0; j < K; j++) {
-        // Taking edge input
-        int c, p;
-        cin >> c >> p;
+    // Step-Djikstra's Algorithm
+    cout << opticals - findAns(graph, vertexCount) << "\n";
 
-        // cout << c << " " << minPath(graph, 1, c) << endl;
-        if (minPath(1, c, graph) <= p)
-            ans++;
-
-    }
-
-    // Output
-    cout << ans << endl;
-    return 0;
+	return 0;
 }
