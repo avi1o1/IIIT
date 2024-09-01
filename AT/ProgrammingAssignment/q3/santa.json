@@ -1,0 +1,12 @@
+{
+    "axiom": "-F",
+    "productions": {
+      "F": "F+F--F+F"
+    },
+    "finals": {
+      "F": "Move forward and draw a line",
+      "+": "Turn left by 75 degrees",
+      "-": "Turn right by 75 degrees"
+    }
+}
+  

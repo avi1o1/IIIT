@@ -18,7 +18,7 @@ This repository contains all the assignments done by me during the CS6.201 Intro
 
 ### Note
 
- - There was a project associated with the course too. The same, can be accessed at https://github.com/unignoramus11/doing-it
+ - There was a project associated with the course too. The same, can be accessed [here](https://github.com/unignoramus11/fuse)
 
 <hr>
 <hr>

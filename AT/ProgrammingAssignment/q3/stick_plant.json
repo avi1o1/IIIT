@@ -1,0 +1,13 @@
+{
+  "axiom": "X",
+  "productions": {
+    "X": "FF[+X]X[-X]FX"
+  },
+  "finals": {
+    "F": "Move forward and draw a line",
+    "+": "Turn right by 45 degrees",
+    "-": "Turn left by 45 degrees",
+    "[": "Save the current state (position and direction)",
+    "]": "Restore the saved state (position and direction)"
+  }
+}
