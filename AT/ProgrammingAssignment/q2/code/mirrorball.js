@@ -19,9 +19,12 @@ const mirrorball = new LSystem({
     'F': () => {
       ctx.beginPath();
       ctx.moveTo(0, 0);
-      ctx.lineTo(0, 11 / (mirrorball.iterations + 1));
+      ctx.lineTo(0, 3 / (mirrorball.iterations + 1));
       ctx.stroke();
-      ctx.translate(0, 11 / (mirrorball.iterations + 1));
+      ctx.translate(0, 3 / (mirrorball.iterations + 1));
+    },
+    'G': () => {
+      ctx.translate(0, 3 / (mirrorball.iterations + 1));
     },
     '[': () => { ctx.save(); },
     ']': () => { ctx.restore(); }
