@@ -1,9 +1,10 @@
 # Submission Report
 
 ## Question 1
-- The solution is based on the depth-first search (DFS) principle.
-- We maintain a `cnt` array and traverse through the DFA, updating values for each vertex.
-- After `M` transitions, we stop and return the `cnt` array.
+- The solution is based on the `DFS` (depth-first search) principle; and the fact that there exists a cycle (number of states is less than or equal to the number of transitions).
+- We look for the cycle; and find the `cycleAt` (stating of the cycle) and `cycleLen` (length of the cycle). We then divide all transitions into 3 parts : before cycle, in cycle and after cycle.
+- We maintain a `cnt` array; where we traverse normally in O(N) naive fashion until `cycleAt`, and then calculate the cyclic part in one go, updating directly to the number of times, the cycle could be taken/completed.
+- Finally, we again traverse the remaining steps in the naive fashion; and return the `cnt` array.
 
 **Note**: The solution assumes a maximum out-degree of 1 for any vertex. If the out-degree is greater than 1, there could be multiple possible outputs, and the code would return one of these.
 
